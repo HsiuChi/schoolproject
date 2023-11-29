@@ -1,0 +1,13 @@
+<!--pages/advice/advice.wxml-->
+<!-- <input type="text" model:value="{{adviceInputValue}}" maxlength="200" placeholder="请输入商品关键字" /> -->
+<view class="adciceInfo">
+  <textarea model:value="{{adviceText}}" maxlength="255" focus="true" placeholder="亲，请输入您的反馈，最多255个字"></textarea>
+</view>
+<view class="adviceGet">
+  <text>商品照片</text>
+  <van-button plain hairline class="adviceGetBt" type="primary" size="mini" round bindtap="getImage">点击上传</van-button>
+</view>
+<view class="adciceImg">
+  <image mode="aspectFill" src="{{adviceImg}}" />
+</view>
+<van-button type="primary" size="large" bindtap="sendAdvice">发送</van-button>

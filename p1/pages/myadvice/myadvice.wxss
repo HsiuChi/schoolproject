@@ -1,0 +1,29 @@
+/* pages/myadvice/myadvice.wxss */
+.shop-item{
+  display: flex;
+  border: 1rpx solid #efefef;
+  margin: 15rpx;
+  border-radius: 8rpx;
+  box-shadow: 1rpx 1rpx 15rpx #ddd;
+}
+
+.thumb{
+  margin-right: 15rpx;
+  padding: 15rpx;
+}
+.thumb image{
+  height: 250rpx;
+  width: 250rpx;
+  display: block;
+}
+.info{
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.emptyInfo{
+  color: #666;
+  margin-left: 20rpx;
+}

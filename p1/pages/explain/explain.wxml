@@ -1,0 +1,26 @@
+<!--pages/explain/explain.wxml-->
+<view style="color: #3CB371; ">
+  <view style="font-size: 35rpx; font-weight: bold; margin: 20rpx;">
+    <text>使用说明:</text>
+  </view>
+  <view style="margin-left: 40rpx;">
+    <view style="margin-bottom: 15rpx;">
+      <text>1、新用户初次登录赠送10金币；\n</text>
+    </view>
+    <view style="margin-bottom: 15rpx;">
+      <text>2、每日签到可获得2金币； \n</text>
+    </view>
+    <view style="margin-bottom: 15rpx;">
+      <text>3、普通用户发布闲置商品、发布求购商品、发送反馈信息均需5金币；\n</text>
+    </view>
+    <view style="margin-bottom: 15rpx;">
+      <text>4、使用60金币可解锁荣耀会员，荣耀会员为终身制；\n</text>
+    </view>
+    <view style="margin-bottom: 15rpx;">
+      <text>5、荣耀会员发布闲置商品、发布求购商品、发送反馈信息只需3金币。\n</text>
+    </view>
+  </view>
+</view>
+
+
+

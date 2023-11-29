@@ -1,0 +1,40 @@
+<!--pages/thingsList/thingsList.wxml-->
+<!-- 搜索框 -->
+<my-search></my-search>  
+<!--  闲置商品 求购商品 展示 -->
+<van-tabs type="card" color="#3CB371" >
+  <!-- 闲置商品列表 -->
+  <van-tab color="#efefef" title="{{query.title}}闲置" >
+    <view class="shop-item" wx:for="{{kindGoodsList}}" wx:key="id">
+      <view class="thumb">
+        <image src="{{item.goodimage}}"></image>
+      </view>
+    <view class="info">
+      <text class="good-name">商品名称：{{item.goodname}}（{{item.goodsort}}）</text>
+      <text>电话：{{item.goodphone}}</text>
+      <text>微信：{{item.goodwechat}}</text>
+      <text>地址：{{item.goodaddress}}</text>
+      <view class="good-price-new">
+        <text>预售价：{{item.goodprice}}￥</text>
+        <text>新鲜度：{{item.goodnew}}%</text>
+      </view>
+    </view>
+  </view>
+  <text class="emptyInfo" hidden="{{!isEmptyGoodInfo}}">亲，暂无闲置商品发布</text>
+  </van-tab>
+  <!-- 求购商品列表 -->
+  <van-tab title="{{query.title}}求购">
+    <view class="shop-item" wx:for="{{kindNeedGoodsList}}" wx:key="id">
+      <view class="thumb">
+        <image src="{{item.needgoodimage}}"></image>
+      </view>
+      <view class="info">
+        <text class="good-name">商品名称：{{item.needgoodname}}（{{item.needgoodsort}}）</text>
+        <text>电话：{{item.needgoodphone}}</text>
+        <text>微信：{{item.needgoodwechat}}</text>
+        <text>地址：{{item.needgoodaddress}}</text>
+      </view>
+    </view>
+    <text class="emptyInfo" hidden="{{!isEmptyNeedGoodInfo}}">亲，暂无求购商品发布</text>
+  </van-tab>
+</van-tabs>

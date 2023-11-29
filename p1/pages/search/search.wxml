@@ -1,0 +1,49 @@
+<!--pages/search/search.wxml-->
+<van-tabs  type="card" color="#3CB371" class="vanTab" animated="true">
+  <van-tab color="#efefef" title="闲置商品">
+    <view class="search_row">
+      <input type="text" model:value="{{goodInputValue}}" placeholder="请输入商品关键字" />
+      <van-button   class="goodkindbutton" type="primary" size="mini" bindtap="goodHandleSure">搜索</van-button>
+    </view>
+    <!-- 闲置商品搜索结果展示 -->
+    <view class="search_content">
+      <view class="shop-item" wx:for="{{searchGoodList}}" wx:key="id">
+        <view class="thumb">
+          <image src="{{item.goodimage}}"></image>
+        </view>
+        <view class="info">
+          <text class="good-name">商品名称：{{item.goodname}}（{{item.goodsort}}）</text>
+          <text>电话：{{item.goodphone}}</text>
+          <text>微信：{{item.goodwechat}}</text>
+          <text>地址：{{item.goodaddress}}</text>
+          <view class="good-price-new">
+            <text>预售价：{{item.goodprice}}￥</text>
+            <text>新鲜度：{{item.goodnew}}%</text>
+          </view>
+        </view>
+      </view>
+      <text class="emptyInfo" hidden="{{!isEmptyGoodInfo}}">亲，暂无闲置商品发布</text>
+    </view>
+  </van-tab>
+  <van-tab title="求购商品">
+    <view class="search_row">
+      <input type="text" model:value="{{needgoodInputValue}}" placeholder="请输入商品关键字"/>
+      <van-button   class="goodkindbutton" type="primary" size="mini" bindtap="needgoodHandleSure">搜索</van-button>
+    </view>
+    <view class="search_content">
+      <view class="shop-item" wx:for="{{searchNeedGoodList}}" wx:key="id">
+        <view class="thumb">
+          <image src="{{item.needgoodimage}}"></image>
+        </view>
+        <view class="info">
+          <text class="good-name">商品名称：{{item.needgoodname}}（{{item.needgoodsort}}）</text>
+          <text>电话：{{item.needgoodphone}}</text>
+          <text>微信：{{item.needgoodwechat}}</text>
+          <text>地址：{{item.needgoodaddress}}</text>
+        </view>
+      </view>
+    </view>
+    <text class="emptyInfo" hidden="{{!isEmptyNeedGoodInfo}}">亲，暂无求购商品发布</text>
+  </van-tab>
+</van-tabs>
+

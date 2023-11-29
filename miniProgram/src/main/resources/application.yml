@@ -1,0 +1,39 @@
+#配置https服务
+#server:
+#  port: 443
+#  ssl:
+#    key-store: classpath:shiyoutongprogram.com.jks
+#    key-store-password: 8w7r968a5k7y
+#    key-store-type: JKS
+
+
+
+#配置数据库
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://43.136.39.175:3306/miniprogram_db
+    username: root
+    password: ma15265092804
+    type: com.alibaba.druid.pool.DruidDataSource
+
+#数据库id自增
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+
+#开启MP日志
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#小程序appid和secret
+miniprogram:
+  appid: wxa3797e1ac1335433
+  secret: d93033eeb78f9c00b2c8d19a535e7b88
+
+
+server:
+  port: 80
+
+

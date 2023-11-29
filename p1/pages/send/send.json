@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-popup": "@vant/weapp/popup/index" ,
+    "van-slider": "@vant/weapp/slider/index"
+  },
+  "enablePullDownRefresh": false
+}

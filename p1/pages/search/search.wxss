@@ -1,0 +1,24 @@
+/* pages/search/search.wxss */
+@import "../home/home.wxss";
+.search_row{
+  margin-top: 15rpx;
+  height: 65rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.search_row input{
+  margin-left: 25rpx;
+  border: 1rpx solid #3CB371;
+  border-radius: 20rpx;
+  height: 95%;
+  width: 73%;
+  padding-left: 30rpx;
+}
+
+.search_row van-button{
+  height: 100%;
+  margin-left: 10rpx;
+  margin-top: 6rpx;
+}
+

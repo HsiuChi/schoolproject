@@ -1,0 +1,14 @@
+<!--pages/myneedgoodorder/myneedgoodorder.wxml-->
+<view class="shop-item" wx:for="{{myneedgoodsList}}" wx:key="id">
+      <view class="thumb">
+        <image src="{{item.needgoodimage}}"></image>
+      </view>
+      <view class="info">
+        <text class="good-name">商品名称：{{item.needgoodname}}（{{item.needgoodsort}}）</text>
+        <text>电话：{{item.needgoodphone}}</text>
+        <text>微信：{{item.needgoodwechat}}</text>
+        <text>地址：{{item.needgoodaddress}}</text>
+        <van-button plain hairline  type="primary" size="mini"  bindtap="deleteMyNeedGood" data-id="{{item.id}}"  round>撤销</van-button>
+      </view>
+    </view>
+    <text class="emptyInfo" hidden="{{!isEmptyNeedGoodInfo}}">亲，暂无求购商品发布</text>

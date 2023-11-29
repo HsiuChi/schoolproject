@@ -1,0 +1,11 @@
+<!--pages/myadvice/myadvice.wxml-->
+<view class="shop-item" wx:for="{{myAdviceList}}" wx:key="id">
+  <view class="thumb">
+    <image src="{{item.adviceimg}}"></image>
+  </view>
+  <view class="info">
+    <text>反馈意见：{{item.advicetext}}</text>
+    <van-button plain hairline type="primary" size="mini" bindtap="deleteMyAdvice" data-id="{{item.id}}" round>撤销</van-button>
+  </view>
+</view>
+<text class="emptyInfo" hidden="{{!isEmptyNeedGoodInfo}}">亲，您暂无反馈意见</text>

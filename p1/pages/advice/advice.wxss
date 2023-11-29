@@ -1,0 +1,35 @@
+/* pages/advice/advice.wxss */
+.adciceInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50rpx;
+}
+textarea{
+  border: 1rpx solid #efefef;
+  width: 650rpx;
+  margin-top: 20rpx;
+}
+.adviceGet {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.adviceGet text{
+  margin-left: 40rpx;
+  font-weight: 500;
+}
+.adviceGet van-button{
+  margin-left: 450rpx;
+}
+.adciceImg{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+image{
+  border: 1rpx dashed #efefef;
+  width:300rpx;
+  height: 300rpx;
+  margin-bottom: 20rpx;
+}

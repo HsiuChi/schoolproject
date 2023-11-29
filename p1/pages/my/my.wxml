@@ -1,0 +1,25 @@
+<!--pages/my/my.wxml-->
+<view class="user_bg">
+  <view class="user_bg_bt">
+    <van-button plain wx:if="{{customers.hasUserInfo==false}}" hairline  type="primary" size="mini" bindtap="wxLogin" round>点击登录</van-button>
+    <van-button plain wx:if="{{customers.hasUserInfo==true}}" hairline  type="primary" size="mini" bindtap="wxSignOut" round>点击退出</van-button>
+  </view>
+  <view class="user_bg_info">
+    <image src="{{customers.avatarurl}}" mode="aspectFill"/>
+    <text style="color: rgb(190, 252, 19);" wx:if="{{customers.vip==1&&customers.hasUserInfo==true}}">荣耀会员</text>
+    <text wx:if="{{customers.hasUserInfo==true}}">昵称：{{customers.nickname}}</text>
+    <text wx:if="{{customers.hasUserInfo==true}}">金币：{{customers.goldcoin}}</text>
+  </view>
+</view>
+<view class="user_other" wx:if="{{customers.hasUserInfo==true}}">
+  <van-cell is-link title="我的闲置" link-type="navigateTo" url="/pages/mygoodorder/mygoodorder" size="large" />
+  <van-cell is-link title="我的求购" link-type="navigateTo" url="/pages/myneedgoodorder/myneedgoodorder" size="large"/>
+  <van-cell is-link title="我的反馈" link-type="navigateTo" url="/pages/myadvice/myadvice" size="large"/>
+  <van-cell is-link title="使用说明" link-type="navigateTo" url="/pages/explain/explain" size="large"/>
+  <!-- <van-cell wx:if="{{customers.administrator==1}}"  is-link title="管理轮播图" link-type="navigateTo" url="/pages/swiper/swiper" size="large"/> -->
+</view>
+
+<van-cell is-link title="合作电话：18801015650"  size="large"/>
+
+
+

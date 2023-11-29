@@ -1,0 +1,30 @@
+<!--pages/swiper/swiper.wxml-->
+<van-tabs type="line" color="#3CB371" animated="true">
+  <van-tab title="删除">
+    <view class="shop-item" wx:for="{{swiperList}}" wx:key="id">
+      <view class="thumb">
+        <image src="{{item.image}}"></image>
+      </view>
+      <view class="info">
+        <text class="good-name">相关信息：{{item.name}}</text>
+        <van-button plain hairline type="primary" size="mini" bindtap="deleteSwiper" data-id="{{item.id}}" round>删除</van-button>
+      </view>
+    </view>
+  </van-tab>
+
+  <van-tab title="插入">
+    <view class="swiperInfo">
+      <textarea model:value="{{swiperText}}" maxlength="255" focus="true" placeholder="亲，请输入相关描述信息，最多255个字"></textarea>
+    </view>
+    <view class="swiperGet">
+      <text>相关图片</text>
+      <van-button plain hairline class="adviceGetBt" type="primary" size="mini" round bindtap="getImage">点击上传</van-button>
+    </view>
+    <view class="swiperImg">
+      <image mode="aspectFill" src="{{swiperImg}}" />
+    </view>
+    <van-button type="primary" size="large" bindtap="sendSwiper">发送</van-button>
+  </van-tab>
+</van-tabs>
+
+

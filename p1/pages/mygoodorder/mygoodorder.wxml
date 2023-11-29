@@ -1,0 +1,18 @@
+<!--pages/mygoodorder/mygoodorder.wxml-->
+<view class="shop-item" wx:for="{{mygoodsList}}" wx:key="id">
+      <view class="thumb">
+        <image src="{{item.goodimage}}"></image>
+      </view>
+    <view class="info">
+      <text class="good-name">商品名称：{{item.goodname}}（{{item.goodsort}}）</text>
+      <text>电话：{{item.goodphone}}</text>
+      <text>微信：{{item.goodwechat}}</text>
+      <text>地址：{{item.goodaddress}}</text>
+      <view class="good-price-new">
+        <text>预售价：{{item.goodprice}}￥</text>
+        <text>新鲜度：{{item.goodnew}}%</text>
+      </view>
+      <van-button plain hairline  type="primary" size="mini" bindtap="deleteMyGood" data-id="{{item.id}}"  round>撤销</van-button> 
+    </view>
+  </view>
+  <text class="emptyInfo" hidden="{{!isEmptyGoodInfo}}">亲，暂无闲置商品发布</text>

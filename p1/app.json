@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/send/send",
+    "pages/my/my",
+    "pages/thingsList/thingsList",
+    "pages/search/search",
+    "pages/mygoodorder/mygoodorder",
+    "pages/myneedgoodorder/myneedgoodorder",
+    "pages/advice/advice",
+    "pages/myadvice/myadvice",
+    "pages/explain/explain",
+    "pages/swiper/swiper"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#3CB371",
+    "navigationBarTitleText": "校园二手交易",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false,
+    "backgroundColor": "#efefef",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home-active.png"
+      },
+      {
+        "pagePath": "pages/send/send",
+        "text": "发布",
+        "iconPath": "/images/send.png",
+        "selectedIconPath": "/images/send-active.png"
+      },
+      {
+        "pagePath": "pages/advice/advice",
+        "text": "联系我们",
+        "iconPath": "/images/advice.png",
+        "selectedIconPath": "/images/advice-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/my.png",
+        "selectedIconPath": "/images/my-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "my-search": "/components/comment_search/comment_search"
+  },
+  "lazyCodeLoading": "requiredComponents"
+}

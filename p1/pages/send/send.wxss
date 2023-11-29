@@ -1,0 +1,73 @@
+/* pages/send/send.wxss */
+.infoInput{
+display: flex;
+margin: 20rpx;
+border-bottom: 1rpx solid #efefef;
+height: 100rpx;
+padding-top: 20rpx;
+}
+.infoInput text{
+  width: 150rpx;
+}
+.infoInput input{
+  /* border: 1rpx solid #666; */
+  margin-left:20rpx;
+  width:400rpx;
+}
+
+.goodkindInfo{
+  margin-left:50rpx;
+  width: 150rpx;
+}
+.goodkindbutton{
+  margin-left:250rpx;
+}
+
+.popupShow{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10rpx;
+}
+.popupShowItem{
+  margin-top: 20rpx;
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10rpx;
+}
+.sliderInput{
+  width: 380rpx;
+  padding-top: 20rpx;
+  margin-left: 40rpx;
+}
+
+.slideText{
+  width:40rpx;
+  margin-left:50rpx ;
+}
+
+.goodImagePlaceTop text{
+  margin-left: 20rpx;
+}
+
+.goodImagePlaceTop van-button{
+  margin-left: 460rpx;
+}
+
+.goodImagePlaceBottom{
+  height: 300rpx;
+  /* border: 1rpx solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40rpx;
+}
+.goodImagePlaceBottom image{
+  border: 1rpx dashed #efefef;
+  width:300rpx;
+  height: 300rpx;
+}
+
+

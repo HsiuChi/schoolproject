@@ -1,0 +1,63 @@
+<!--pages/home/home.wxml-->
+<!-- 搜索框 -->
+<my-search></my-search>
+<!-- 轮播图 -->
+<swiper indicator-dots circular indicator-color="white" indicator-active-color="gray" autoplay interval="3000" current="index">
+  <swiper-item wx:for="{{swiperList}}" wx:key="index">
+    <image mode="widthFit" src="{{item.image}}"></image>
+  </swiper-item>
+</swiper>
+<!-- 九宫格 -->
+<view class="grid-list">
+  <navigator class="grid-item" wx:for="{{gridList}}" wx:key="id" url="/pages/thingsList/thingsList?id={{item.id}}&title={{item.name}}">
+    <image src="{{item.image}}"></image>
+    <text>{{item.name}}</text>
+  </navigator>
+</view>
+<!-- 意见反馈 每日签到 -->
+<view class="img-box">
+  <view class="leftLink" bindtap="beVip">
+    <image src="{{link[0]}}" mode="widthFix"></image>
+  </view>
+  <view class="rightLink" bindtap="punchCard">
+    <image src="{{link[1]}}" mode="widthFix"></image>
+  </view>
+</view>
+<!-- 所有 闲置商品 求购商品 展示 -->
+<van-tabs   type="card" color="#3CB371" >
+  <van-tab color="#efefef" title="全部闲置" >
+    <view class="shop-item" wx:for="{{kindGoodsList}}" wx:key="id">
+      <view class="thumb">
+        <image src="{{item.goodimage}}"></image>
+      </view>
+    <view class="info">
+      <text class="good-name">商品名称：{{item.goodname}}（{{item.goodsort}}）</text>
+      <text>电话：{{item.goodphone}}</text>
+      <text>微信：{{item.goodwechat}}</text>
+      <text>地址：{{item.goodaddress}}</text>
+      <view class="good-price-new">
+        <text>预售价：{{item.goodprice}}￥</text>
+        <text>新鲜度：{{item.goodnew}}%</text>
+      </view>
+    </view>
+  </view>
+  <text class="emptyInfo" hidden="{{!isEmptyGoodInfo}}">亲，暂无闲置商品发布</text>
+  </van-tab>
+
+  <van-tab title="全部求购">
+    <view class="shop-item" wx:for="{{kindNeedGoodsList}}" wx:key="id">
+      <view class="thumb">
+        <image src="{{item.needgoodimage}}"></image>
+      </view>
+      <view class="info">
+        <text class="good-name">商品名称：{{item.needgoodname}}（{{item.needgoodsort}}）</text>
+        <text>电话：{{item.needgoodphone}}</text>
+        <text>微信：{{item.needgoodwechat}}</text>
+        <text>地址：{{item.needgoodaddress}}</text>
+      </view>
+    </view>
+    <text class="emptyInfo" hidden="{{!isEmptyNeedGoodInfo}}">亲，暂无求购商品发布</text>
+  </van-tab>
+</van-tabs>
+<view class="viewempty"> </view>
+

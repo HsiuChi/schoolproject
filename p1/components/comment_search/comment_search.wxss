@@ -1,0 +1,21 @@
+/* components/search/search.wxss */
+.search_bar{
+  background-color: var(--themeColor);
+  height: 90rpx;
+  padding: 10rpx;
+}
+
+.search_bar navigator{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  background-color: #fff;
+  height: 90%;
+  color: #666;
+  border-radius: 15rpx;
+} 
+
+.search_bar navigator icon{
+  margin-right: 10rpx;
+}

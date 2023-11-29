@@ -1,0 +1,123 @@
+<!--pages/send/send.wxml-->
+<view style="margin-top: 10rpx;">
+  <van-tabs   type="card" color="#3CB371" >
+    <van-tab color="#efefef" title="出售商品" >
+      <!-- 出售商品界面 -->
+      <view class="infoInput">
+        <text>商品名称</text> 
+        <input type="text" bindinput="goodnameInput" value="{{goods.goodname}}" placeholder="输入商品名称"/>
+      </view>
+
+      <view class="infoInput">
+       <text>分类</text> 
+       <text class="goodkindInfo">{{goods.goodsort}}</text>
+       <van-button plain hairline class="goodkindbutton" type="primary" size="mini" bindtap="chooseKinds" round>请选择分类</van-button>
+      </view>
+      <!-- 从底部弹出 -->
+      <van-popup  show="{{ show }}" position="bottom" custom-style="height: 30%;"
+bind:close="onClose" safe-area-tab-bar="true">
+      <!-- 这是弹出层展示的内容 -->
+      <view class="popupShow">
+        <view class="popupShowItem" wx:for="{{goodskind}}" wx:key="index">
+          <van-button  plain hairline type="primary" size="mini" bind:click="{{item.action}}" round>{{item.name}}</van-button>
+        </view>
+      </view>
+      </van-popup>
+
+      <view class="infoInput">
+        <text>新鲜度</text> 
+        <view class="sliderInput">
+          <van-slider value="{{ goods.goodnew }}" bar-height="4px" bind:drag="goodnewInput" active-color="#3CB371" />
+        </view>
+        <view class="slideText">{{ goods.goodnew }}%</view>
+        <!-- <input type="text" bindinput="goodoldInput" value="{{goodname}}"placeholder="输入商品的磨损程度"/> -->
+      </view>
+
+      <view class="infoInput">
+        <text>预售价</text> 
+        <input type="text" bindinput="goodpriceInput" value="{{goods.goodprice}}"placeholder="输入预售价（单位：元）" maxlength="15"/>
+      </view>
+
+      <view class="infoInput">
+        <text>联系电话</text> 
+        <input type="text" bindinput="goodphoneInput" value="{{goods.goodphone}}"placeholder="输入您的联系电话(11位)" maxlength='11'/>
+      </view>
+
+      <view class="infoInput">
+        <text>微信</text> 
+        <input type="text" bindinput="goodwechatInput" value="{{goods.goodwechat}}"placeholder="输入您的微信"/>
+      </view>
+
+      <view class="infoInput">
+        <text>地址</text> 
+        <input type="text" bindinput="goodaddressInput" value="{{goods.goodaddress}}"placeholder="输入您的地址"/>
+      </view>
+
+      <view class="goodImagePlace">
+        <view class="goodImagePlaceTop">
+          <text>商品照片</text>
+          <van-button plain hairline class="goodkindbutton" type="primary" size="mini"  round bindtap="getImage">点击上传</van-button>
+        </view>
+        <view class="goodImagePlaceBottom">
+          <image mode="aspectFill" src="{{goods.goodimage}}" />
+        </view>
+      </view>
+      <van-button type="primary" size="large" class="sendButton" bindtap="sendMessage">发布</van-button>
+    </van-tab>
+
+
+    <!-- 求购商品界面 -->
+    <van-tab title="求购商品">
+      <view class="infoInput">
+        <text>商品名称</text> 
+        <input type="text" bindinput="needgoodnameInput" value="{{needgoods.needgoodname}}" placeholder="输入商品名称"/>
+      </view>
+
+      <view class="infoInput">
+       <text>分类</text> 
+       <text class="goodkindInfo">{{needgoods.needgoodsort}}</text>
+       <van-button plain hairline class="goodkindbutton" type="primary" size="mini" bindtap="needchooseKinds" round>请选择分类</van-button>
+      </view>
+      <!-- 从底部弹出 -->
+      <van-popup  show="{{ show }}" position="bottom" custom-style="height: 25%;"
+bind:close="onClose" safe-area-tab-bar="true">
+      <!-- 这是弹出层展示的内容 -->
+      <view class="popupShow">
+        <view class="popupShowItem" wx:for="{{needgoodskind}}" wx:key="index">
+          <van-button  plain hairline type="primary" size="mini" bind:click="{{item.action}}" round>{{item.name}}</van-button>
+        </view>
+      </view>
+      </van-popup>
+
+      <view class="infoInput">
+        <text>联系电话</text> 
+        <input type="text" bindinput="needgoodphoneInput" value="{{needgoods.needgoodphone}}"placeholder="输入您的联系电话(11位)" maxlength='11' />
+      </view>
+
+      <view class="infoInput">
+        <text>微信</text> 
+        <input type="text" bindinput="needgoodwechatInput" value="{{needgoods.needgoodwechat}}"placeholder="输入您的微信"/>
+      </view>
+
+      <view class="infoInput">
+        <text>地址</text> 
+        <input type="text" bindinput="needgoodaddressInput" value="{{needgoods.needgoodaddress}}"placeholder="输入您的地址"/>
+      </view>
+
+      <view class="goodImagePlace">
+        <view class="goodImagePlaceTop">
+          <text>商品照片</text>
+          <van-button plain hairline class="goodkindbutton" type="primary" size="mini"  round bindtap="needgetImage">点击上传</van-button>
+        </view>
+        <view class="goodImagePlaceBottom">
+          <image mode="aspectFill" src="{{needgoods.needgoodimage}}"/>
+        </view>
+      </view>
+      <van-button type="primary" size="large" class="sendButton" bindtap="needsendMessage">发布</van-button>
+    </van-tab>
+    
+  </van-tabs>
+</view>
+
+
+
